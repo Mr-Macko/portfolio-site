@@ -13,13 +13,29 @@ Primary Color (Purple): #357b70;
 Secondary Color (Orange): #e0b354;
  */
 
- * {
+ :root {
+  --page-backround: azure; 
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --link-visited: #05676e;
+  --link-active: #489c79;
+  --first-button-font-color: rgb(255, 255, 255);
+  --second-button-font-color: #2b2b2b;
+  --grid-item-bg: lightgray;
+  --sun-color-1: #edc655;
+  --sun-color-2: #fcffad;
+  --sun-color-3: #f76414;
+  --border-bottom: rgba(0, 0, 0, 0.3);
+  ;
+}
+
+* {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 body {
-  background-color: azure;  
+  background-color: var(--page-backround);  
   font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -106,11 +122,11 @@ h3 {
   }
   
 a {
-    color: #357b70;
+    color: var(--primary-color);
   }
 
 a {
-  color: #357b70;
+  color: var(--primary-color);
 }
   
 a:hover, a:focus {
@@ -120,12 +136,12 @@ a:hover, a:focus {
 
 a:visited {
     /* visited link */
-    color: #05676e;
+    color: var(--link-visited);
   }
   
 a:active {
     /* selected link */
-    color: #489c79;
+    color: var(--link-active);
   }
 
 input, texture, select, button {
@@ -138,14 +154,14 @@ button {
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: #357b70;
-  color: rgb(255, 255, 255);
+  background-color: var(--primary-color) ;
+  color: var(--first-button-font-color);
   text-decoration: none;
   /*adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
   border-radius: 25px;
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid var(--border-bottom);
 }
 
 
@@ -157,8 +173,8 @@ button:hover, button:focus {
   }
 
 .button__secondary {
-    background-color: #e0b354;
-    color: #2b2b2b;
+    background-color: var(--secondary-color);
+    color: var(--second-button-font-color);
   }
 
 .navigation-list__item--active {
@@ -185,18 +201,12 @@ button:hover, button:focus {
  
   }
   .grid__item {
-    background-color: lightgray;
+    border-radius: 2%;
+    background-color: var(--grid-item-bg);
     width: auto;
     min-height: auto;
     margin: 0;
     padding: 10px;
-  }
-  .grid__item:last-child {
-    -ms-grid-column: 3;
-    grid-column: 3 / 3;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row: 1 / 3;
   }
  }
 
@@ -225,7 +235,7 @@ button:hover, button:focus {
   }
 }
 
-.button {
+.button, button {
   /* overwrites browser defaults */
   /* resets the border */
   border: none;
@@ -233,28 +243,8 @@ button:hover, button:focus {
   /* takes the font from the outer container */
   font-family: inherit;
   /* style button */
-  background-color: #357b70;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.2s opacity;
-  -o-transition: 0.2s opacity;
-  transition: 0.2s opacity;
-}
-
-button {
-  /* overwrites browser defaults */
-  /* resets the border */
-  border: none;
-  display: inline-block;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* style button */
-  background-color: #357b70;
-  color: rgb(255, 255, 255);
+  background-color: var(--primary-color);
+  color: var(--first-button-font-color);
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
@@ -273,6 +263,13 @@ button:focus,
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
+}
+
+/* Contact Page */
+.contact-me {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* About Page */
@@ -294,24 +291,24 @@ button:focus,
 /* About - SVG Animation*/
 @-webkit-keyframes color-change {
   0% {
-    fill: #edc655;
+    fill: var(--sun-color-1);
   }
   50% {
-    fill: #fcffad
+    fill: var(--sun-color-2)
   }
   100% {
-    fill: #f76414
+    fill: var(--sun-color-3)
   }
 }
 @keyframes color-change {
   0% {
-    fill: #edc655;
+    fill: var(--sun-color-1);
   }
   50% {
-    fill: #fcffad
+    fill: var(--sun-color-2)
   }
   100% {
-    fill: #f76414
+    fill: var(--sun-color-3)
   }
 }
 .sun {

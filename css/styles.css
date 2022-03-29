@@ -1,300 +1,304 @@
-/*
-Colors used
+  /*
+  Colors used
 
-Text Color (Dark Gray): #2b2b2b;
-Primary Color (Purple): #357b70;
-Secondary Color (Orange): #e0b354;
- */
+  Text Color (Dark Gray): #2b2b2b;
+  Primary Color (Purple): #357b70;
+  Secondary Color (Orange): #e0b354;
+  */
 
-:root {
-  --page-backround: azure; 
-  --primary-color: #357b70;
-  --secondary-color: #e0b354;
-  --link-visited: #05676e;
-  --link-active: #489c79;
-  --first-button-font-color: rgb(255, 255, 255);
-  --second-button-font-color: #2b2b2b;
-  --grid-item-bg: lightgray;
-  --sun-color-1: #edc655;
-  --sun-color-2: #fcffad;
-  --sun-color-3: #f76414;
-  --border-bottom: rgba(0, 0, 0, 0.3);
-  ;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: var(--page-backround);  
-  font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    /* Sets the font size to 16px */
-    line-height: 1.6;
-    /* Sets the line-height to 1.6 */
-    margin: 0;
+  :root {
+    --page-backround: azure; 
+    --primary-color: #357b70;
+    --secondary-color: #e0b354;
+    --link-visited: #05676e;
+    --link-active: #489c79;
+    --first-button-font-color: rgb(255, 255, 255);
+    --second-button-font-color: #2b2b2b;
+    --grid-item-bg: lightgray;
+    --sun-color-1: #edc655;
+    --sun-color-2: #fcffad;
+    --sun-color-3: #f76414;
+    --border-bottom: rgba(0, 0, 0, 0.3);
+    ;
   }
 
-  .page-header {
-    display: flex;
-    width: 100%;
-    padding: 20px;
+  * {
+    box-sizing: border-box;
   }
 
-  .page-header__item {
-    flex: 0 1 200px;
+  body {
+    background-color: var(--page-backround);  
+    font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      /* Sets the font size to 16px */
+      line-height: 1.6;
+      /* Sets the line-height to 1.6 */
+      margin: 0;
+    }
+
+    .page-header {
+      display: flex;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .page-header__item {
+      flex: 0 1 200px;
+    }
+
+    .page-header__item:last-child {
+      flex-grow: 1;
+      text-align: right;
+    }
+
+    .page-header__item--logo {
+      width: 50px;
+    }
+
+    .navigation-list {
+      list-style-type: none;
+    }
+    
+    .navigation-list li {
+      display: inline-block;
+      margin-left: 15px;
+    }
+
+    .profile {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .profile__portrait {
+      float: left;
+      width: 250px;
+      margin-right: 40px;
+      border-radius: 50%;
+    }
+
+  .page-footer {
+      clear: both;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
   }
 
-  .page-header__item:last-child {
-    flex-grow: 1;
-    text-align: right;
-  }
+  h1 {
+      font-size: 32px;
+      font-weight: 700;
+    }
+    
+  h2 {
+      font-size: 25px;
+      font-weight: 700;
+    }
+    
+  h3 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    
+  a {
+      color: var(--primary-color);
+    }
 
-  .page-header__item--logo {
-    width: 50px;
-  }
-
-  .navigation-list {
-    list-style-type: none;
-  }
-  
-  .navigation-list li {
-    display: inline-block;
-    margin-left: 15px;
-  }
-
-  .profile {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .profile__portrait {
-    float: left;
-    width: 250px;
-    margin-right: 40px;
-    border-radius: 50%;
-  }
-
-.page-footer {
-    clear: both;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-}
-
-h1 {
-    font-size: 32px;
-    font-weight: 700;
-  }
-  
-h2 {
-    font-size: 25px;
-    font-weight: 700;
-  }
-  
-h3 {
-    font-size: 20px;
-    font-weight: 700;
-  }
-  
-a {
+  a {
     color: var(--primary-color);
   }
+    
+  a:hover, a:focus {
+      /* No underlining when hovering over a link */
+      text-decoration: none;
+    }
 
-a {
-  color: var(--primary-color);
-}
-  
-a:hover, a:focus {
-    /* No underlining when hovering over a link */
+  a:visited {
+      /* visited link */
+      color: var(--link-visited);
+    }
+    
+  a:active {
+      /* selected link */
+      color: var(--link-active);
+    }
+
+  input, texture, select, button {
+      font-family: system-ui;
+    }
+
+  button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+    background-color: var(--primary-color) ;
+    color: var(--first-button-font-color);
     text-decoration: none;
+    /*adds spacing to the button (this will be discussed more in-depth later) */
+    padding: 10px;
+    border-radius: 25px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 2px solid var(--border-bottom);
   }
 
-a:visited {
-    /* visited link */
-    color: var(--link-visited);
+
+  button:hover, button:focus {
+      /* lets the mouse appear as a hand when hovering over the button */
+      cursor: pointer;
+      /* reduces the opacity of the button to 80% */
+      opacity: 0.8;
+    }
+
+  .button__secondary {
+      background-color: var(--secondary-color);
+      color: var(--second-button-font-color);
+    }
+
+  .navigation-list__item--active {
+      text-decoration: none;
+    }
+
+  /* grid */
+  /* start grid fallback */
+  .grid__item {
+    display: inline-block;
+    width: 33%;
   }
+  /* end grid fallback */
   
-a:active {
-    /* selected link */
-    color: var(--link-active);
+  @supports (display: grid) {
+    .grid {
+      display: grid;
+      /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+      margin: 0;
+  
+    }
+    .grid__item {
+      border-radius: 50%;
+      background-color: var(--grid-item-bg);
+      width: auto;
+      min-height: auto;
+      margin: 0;
+      padding: 10px;
+    }
   }
 
-input, texture, select, button {
-    font-family: system-ui;
+  @media all and (max-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media all and (min-width: 500px) and (max-width: 750px){
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media all and (max-width: 750px) {
+    .grid {
+      grid-gap: 10px;
+    }
+    .grid__item:last-child {
+      grid-column: auto / auto;
+      grid-row: auto / auto;
+    }
+    h1 {
+      font-size: 22px;
+    }
   }
 
-button {
-  /* overwrites browser defaults and resets the border */
-  border: none;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: var(--primary-color) ;
-  color: var(--first-button-font-color);
-  text-decoration: none;
-  /*adds spacing to the button (this will be discussed more in-depth later) */
-  padding: 10px;
-  border-radius: 25px;
-  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid var(--border-bottom);
-}
+  .button, button {
+    /* overwrites browser defaults */
+    /* resets the border */
+    border: none;
+    display: inline-block;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* style button */
+    background-color: var(--primary-color);
+    color: var(--first-button-font-color);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    /* width of the border, type, color */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition: 0.2s opacity;
+  }
 
-
-button:hover, button:focus {
+  button:hover,
+  button:focus,
+  .button:hover,
+  .button:focus {
     /* lets the mouse appear as a hand when hovering over the button */
     cursor: pointer;
     /* reduces the opacity of the button to 80% */
     opacity: 0.8;
   }
 
-.button__secondary {
-    background-color: var(--secondary-color);
-    color: var(--second-button-font-color);
+  /* Contact Page */
+  .contact-me {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
   }
 
-.navigation-list__item--active {
-    text-decoration: none;
+  /* About Page */
+  .about-me {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
   }
 
-/* grid */
-/* start grid fallback */
-.grid__item {
-  display: inline-block;
-  width: 33%;
- }
- /* end grid fallback */
- 
- @supports (display: grid) {
-  .grid {
-    display: grid;
-    /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    margin: 0;
- 
+  .about-list {
+    list-style-type: none;
   }
-  .grid__item {
-    background-color: var(--grid-item-bg);
-    width: auto;
-    min-height: auto;
-    margin: 0;
-    padding: 10px;
-  }
-  .grid__item:last-child {
-    grid-column: 3 / 3;
-    grid-row: 1 / 3;
-  }
- }
 
- @media all and (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
+  .berlin-animation {
+    max-width: 700px;
+    margin: 0 auto;
   }
-}
-@media all and (min-width: 500px) and (max-width: 750px){
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media all and (max-width: 750px) {
-  .grid {
-    grid-gap: 10px;
-  }
-  .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
-  h1 {
-    font-size: 22px;
-  }
-}
 
-.button, button {
-  /* overwrites browser defaults */
-  /* resets the border */
-  border: none;
-  display: inline-block;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* style button */
-  background-color: var(--primary-color);
-  color: var(--first-button-font-color);
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  transition: 0.2s opacity;
-}
-
-button:hover,
-button:focus,
-.button:hover,
-.button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
-  cursor: pointer;
-  /* reduces the opacity of the button to 80% */
-  opacity: 0.8;
-}
-
-/* About Page */
-.about-me {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.about-list {
-  list-style-type: none;
-}
-
-.berlin-animation {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* About - SVG Animation*/
-@keyframes color-change {
-  0% {
-    fill: var(--sun-color-1);
+  /* About - SVG Animation*/
+  @keyframes color-change {
+    0% {
+      fill: var(--sun-color-1);
+    }
+    50% {
+      fill: var(--sun-color-2)
+    }
+    100% {
+      fill: var(--sun-color-3)
+    }
   }
-  50% {
-    fill: var(--sun-color-2)
+  .sun {
+    animation: 4s color-change infinite alternate linear;
   }
-  100% {
-    fill: var(--sun-color-3)
-  }
-}
-.sun {
-  animation: 4s color-change infinite alternate linear;
-}
 
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
+  @keyframes cloud-move {
+    from {
+      transform: translate(0, 50px);
+    }
+    to {
+      transform: translate(200px, 50px);
+    }
   }
-  to {
-    transform: translate(200px, 50px);
-  }
-}
 
-.cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    transform: translate(446px, 48px);
+  .cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
   }
-  to {
-    transform: translate(100px, 48px);
-  }
-}
 
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
-}
+  @keyframes cloud-move-reverse {
+    from {
+      transform: translate(446px, 48px);
+    }
+    to {
+      transform: translate(100px, 48px);
+    }
+  }
+
+  .cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+  }
