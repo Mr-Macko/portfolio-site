@@ -265,6 +265,10 @@ button:focus,
   opacity: 0.8;
 }
 
+.work-headline {
+  text-align: center;
+}
+
 /* Contact Page */
 .contact-me {
   max-width: 700px;
