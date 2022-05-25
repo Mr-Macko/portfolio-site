@@ -178,7 +178,7 @@
   
     }
     .grid__item {
-      border-radius: 50%;
+      border-radius: 2%;
       background-color: var(--grid-item-bg);
       width: auto;
       min-height: auto;
