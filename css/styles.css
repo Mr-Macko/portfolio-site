@@ -97,7 +97,7 @@
     
   h3 {
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 0;
     }
     
   a {
@@ -250,6 +250,12 @@
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
+  }
+
+  .intro {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
   }
 
   .about-list {
